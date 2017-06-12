@@ -10,152 +10,165 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<nav class="nav has-shadow">
-		<div class="container">
-			<div class="nav-left">
-				<a class="nav-item">
-					<img src="assets/imgs/myflex-logo.png" alt="MyFlex logo">
-				</a>
-			</div>
-			<span class="nav-toggle">
-				<span></span>
-				<span></span>
-				<span></span>
-			</span>
-			<div class="nav-right nav-menu">
-				<a class="nav-item is-tab is-active">Home</a>
-				<a class="nav-item is-tab">Documentation</a>
-				<a class="nav-item is-tab">Get Started</a>
-				<a class="nav-item is-tab">Talk to Us</a>
-				<div class="nav-item">
-					<a class="button is-primary">
-						<span class="icon">
-							<i class="fa fa-user-circle"></i>
-						</span>
-						<span>Login</span>
+	
+	<div id="root">
+
+		<nav class="nav has-shadow">
+			<div class="container">
+				<div class="nav-left">
+					<a class="nav-item">
+						<img src="assets/imgs/myflex-logo.png" alt="MyFlex logo">
 					</a>
 				</div>
-			</div>
-		</div>
-	</nav>
-	<section class="section" id="myflexapp">
-		<div class="container">
-			<div class="columns">
-				<div class="column" id="app-info">
-					<h1 class="title"><b>Bill</b> Payments Made Easy</h1>
-					<h2>
-						Pay Bills, Buy Airtime and Transfer Money to any Nigerian Account Number or Mobile Wallet
-					</h2><br/>
-					<!-- <button class="button is-warning">App Store</button> -->
-					<!-- <button class="button is-warning">Google Play</button> -->
-					<img id="download-icon" src="assets/imgs/appstore.svg">
-					<img id="download-icon" src="assets/imgs/playstore.svg">
+				<span class="nav-toggle" :class= "{'is-active':showMobileMenu}" @click="showMobileMenu = !showMobileMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+				<div class="nav-right nav-menu" :class="{'is-active':showMobileMenu}">
+					<a class="nav-item is-tab is-active">Home</a>
+					<a class="nav-item is-tab">Documentation</a>
+					<a class="nav-item is-tab">Get Started</a>
+					<a class="nav-item is-tab">Talk to Us</a>
+					<div class="nav-item">
+						<a class="button is-primary">
+							<span class="icon">
+								<i class="fa fa-user-circle"></i>
+							</span>
+							<span>Login</span>
+						</a>
+					</div>
 				</div>
-				<div class="column has-text-centered" id="app">
-					<div id="app-area">
-						<h3 class="title">What will you like to do?</h3>
-						<div class="tile is-ancestor">
-							<div class="tile is-vertical">
-								<div class="tile is-horizontal">
-									<div class="tile is-parent is-vertical">
-										<article class="tile is-child" id="feature">
-											<span class="icon" id="feature-icon">
-												<img src="assets/imgs/phone.svg">
-											</span>
-											<p class="subtitle">Buy Airtime</p>
-										</article>
+			</div>
+		</nav>
+
+		<section class="section" id="myflexapp">
+			<div class="container">
+				<div class="columns">
+					<div class="column" id="app-info">
+						<h1 class="title"><b>Bill</b> Payments Made Easy</h1>
+						<h2>
+							Pay Bills, Buy Airtime and Transfer Money to any Nigerian Account Number or Mobile Wallet
+						</h2><br/>
+						<!-- <button class="button is-warning">App Store</button> -->
+						<!-- <button class="button is-warning">Google Play</button> -->
+						<img id="download-icon" src="assets/imgs/appstore.svg">
+						<img id="download-icon" src="assets/imgs/playstore.svg">
+					</div>
+					<div class="column has-text-centered" id="app">
+						<div id="app-area">
+							<h3 class="title">What will you like to do?</h3>
+							<div class="tile is-ancestor">
+								<div class="tile is-vertical">
+									<div class="tile is-horizontal">
+										<div class="tile is-parent is-vertical">
+											<article class="tile is-child" id="feature">
+												<span class="icon" id="feature-icon">
+													<img src="assets/imgs/phone.svg">
+												</span>
+												<p class="subtitle">Buy Airtime</p>
+											</article>
+										</div>
+										<div class="tile is-parent is-vertical">
+											<article class="tile is-child" id="feature">
+												<span class="icon" id="feature-icon">
+													<img src="assets/imgs/signal-bars.svg">
+												</span>
+												<p class="subtitle">Buy Data</p>
+											</article>
+										</div>
 									</div>
-									<div class="tile is-parent is-vertical">
-										<article class="tile is-child" id="feature">
-											<span class="icon" id="feature-icon">
-												<img src="assets/imgs/signal-bars.svg">
-											</span>
-											<p class="subtitle">Buy Data</p>
-										</article>
+									<div class="tile is-horizontal">
+										<div class="tile is-parent is-vertical">
+											<article class="tile is-child" id="feature">
+												<span class="icon" id="feature-icon">
+													<img src="assets/imgs/tv.svg">
+												</span>
+												<p class="subtitle">Pay TV</p>
+											</article>
+										</div>
+										<div class="tile is-parent is-vertical">
+											<article class="tile is-child" id="feature">
+												<span class="icon" id="feature-icon">
+													<img src="assets/imgs/bulb.svg">
+												</span>
+												<p class="subtitle">Electricity</p>
+											</article>
+										</div>
 									</div>
-								</div>
-								<div class="tile is-horizontal">
-									<div class="tile is-parent is-vertical">
-										<article class="tile is-child" id="feature">
-											<span class="icon" id="feature-icon">
-												<img src="assets/imgs/tv.svg">
-											</span>
-											<p class="subtitle">Pay TV</p>
-										</article>
-									</div>
-									<div class="tile is-parent is-vertical">
-										<article class="tile is-child" id="feature">
-											<span class="icon" id="feature-icon">
-												<img src="assets/imgs/bulb.svg">
-											</span>
-											<p class="subtitle">Electricity</p>
-										</article>
-									</div>
-								</div>
-								<div class="tile is-horizontal">
-									<div class="tile is-parent is-vertical">
-										<article class="tile is-child" id="feature">
-											<span class="icon" id="feature-icon">
-												<img src="assets/imgs/bank.svg">
-											</span>
-											<p class="subtitle">Money Transfer</p>
-										</article>
-									</div>
-									<div class="tile is-parent is-vertical">
-										<article class="tile is-child" id="feature">
-											<span class="icon" id="feature-icon">
-												<img src="assets/imgs/education.svg">
-											</span>
-											<p class="subtitle">Education</p>
-										</article>
+									<div class="tile is-horizontal">
+										<div class="tile is-parent is-vertical">
+											<article class="tile is-child" id="feature">
+												<span class="icon" id="feature-icon">
+													<img src="assets/imgs/bank.svg">
+												</span>
+												<p class="subtitle">Money Transfer</p>
+											</article>
+										</div>
+										<div class="tile is-parent is-vertical">
+											<article class="tile is-child" id="feature">
+												<span class="icon" id="feature-icon">
+													<img src="assets/imgs/education.svg">
+												</span>
+												<p class="subtitle">Education</p>
+											</article>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+											
 					</div>
-										
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="section" id="wrapper">
-		<div class="container has-text-centered" id="about-flex">
-			<h2 class="subtitle">
-				<b>Bill</b> Payments Made Easy
-			</h2>
-			<div class="columns">
-				<div class="column">
-					<span class="icon" id="feature-icon">
-						<img src="assets/imgs/smiley.svg">
-					</span>
-					<p><b>Quick</b></p>
-					<p>Pay bills and make payments in less than a minute</p>
-				</div>
-				<div class="column">
-					<span class="icon" id="feature-icon">
-						<img src="assets/imgs/wallet.svg">
-					</span>
-					<p><b>Save</b></p>
-					<p>Save money when you pay bills and make payments</p>
-				</div>
-				<div class="column">
-					<span class="icon" id="feature-icon">
-						<img src="assets/imgs/clock.svg">
-					</span>
-					<p><b>24/7</b></p>
-					<p>Available 24/7 to pay your bills and make payments</p>
+		</section>
+
+		<section class="section" id="wrapper">
+			<div class="container has-text-centered" id="about-flex">
+				<h2 class="subtitle">
+					<b>Bill</b> Payments Made Easy
+				</h2>
+				<div class="columns">
+					<div class="column">
+						<span class="icon" id="feature-icon">
+							<img src="assets/imgs/smiley.svg">
+						</span>
+						<p><b>Quick</b></p>
+						<p>Pay bills and make payments in less than a minute</p>
+					</div>
+					<div class="column">
+						<span class="icon" id="feature-icon">
+							<img src="assets/imgs/wallet.svg">
+						</span>
+						<p><b>Save</b></p>
+						<p>Save money when you pay bills and make payments</p>
+					</div>
+					<div class="column">
+						<span class="icon" id="feature-icon">
+							<img src="assets/imgs/clock.svg">
+						</span>
+						<p><b>24/7</b></p>
+						<p>Available 24/7 to pay your bills and make payments</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<footer class="footer">
-		<div class="container">
-			<div class="content has-text-centered">
-				<p class="copyright">
-					2017 <i class="fa fa-copyright" aria-hidden="true" style="line-height: 1.5em;"></i> <b>myFlex</b> is Powered by <a href="http://flexmagnet.net">FlexMagnet Consulting</a>
-				</p>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p class="copyright">
+						2017 <i class="fa fa-copyright" aria-hidden="true" style="line-height: 1.5em;"></i> <b>myFlex</b> is Powered by <a href="http://flexmagnet.net">FlexMagnet Consulting</a>
+					</p>
+				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
+
+	</div>
+
+	<script src="http://unpkg.com/vue"></script>
+
+	<script src="assets/js/app.js"></script>
+
 </body>
 </html>
