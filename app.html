@@ -25,7 +25,21 @@
 					<span></span>
 					<span></span>
 				</span>
-				<div class="nav-right nav-menu" :class="{'is-active':showMobileMenu}">
+				<div class="nav-right nav-menu is-hidden-mobile" :class="{'is-active':showMobileMenu}">
+					<a class="nav-item is-tab" :class="{'is-active':showQuickLinks}" @click="showQuickActions">Home</a>
+					<a class="nav-item is-tab">Documentation</a>
+					<a class="nav-item is-tab">Talk to Us</a>
+					<a class="nav-item is-tab" :class="{'is-active':showSignUp}" @click="showSignUpForm">Get Started</a>
+					<div class="nav-item">
+						<a class="button is-primary" @click="showLoginForm()">
+							<span class="icon">
+								<i class="fa fa-user-circle"></i>
+							</span>
+							<span>Login</span>
+						</a>
+					</div>
+				</div>
+				<div class="nav-right nav-menu is-hidden-desktop" :class="{'is-active':showMobileMenu}">
 					<a class="nav-item is-tab" :class="{'is-active':showQuickLinks}" @click="showQuickActions" href="#app">Home</a>
 					<a class="nav-item is-tab">Documentation</a>
 					<a class="nav-item is-tab">Talk to Us</a>
@@ -72,6 +86,7 @@
 						</div>
 											
 					</div>
+					<!-- <div class="is-clearfix"></div> -->
 				</div>
 			</div>
 		</section>
@@ -108,13 +123,51 @@
 		</section>
 
 		<footer class="footer">
+
 			<div class="container">
-				<div class="content has-text-centered">
-					<p class="copyright">
-						2017 <i class="fa fa-copyright" aria-hidden="true" style="line-height: 1.5em;"></i> <b>myFlex</b> is Powered by <a href="http://flexmagnet.net">FlexMagnet Consulting</a>
-					</p>
+
+				<div class="columns">
+
+					<div class="column is-4">
+
+						<div class="content">
+							<span id="social-link">
+								<a><i class="fa fa-facebook-official" aria-hidden="true" style="line-height: 1.5em;"></i></a>
+							</span>
+							<span id="social-link">
+								<a><i class="fa fa-instagram" aria-hidden="true" style="line-height: 1.5em;"></i></a>
+							</span>
+							<span id="social-link">
+								<a><i class="fa fa-twitter" aria-hidden="true" style="line-height: 1.5em;"></i></a>
+							</span>
+						</div>
+
+					</div>
+
+					<div class="column is-4">
+
+						<div class="content">
+							<p class="copyright">
+								2017 <i class="fa fa-copyright" aria-hidden="true" style="line-height: 1.5em;"></i> <b>myFlex</b> is Powered by <a href="http://flexmagnet.net">FlexMagnet Consulting</a>
+							</p>
+						</div>
+
+					</div>
+
+					<div class="column is-4">
+
+						<div class="content">
+
+							
+
+						</div>
+
+					</div>
+
 				</div>
+
 			</div>
+
 		</footer>
 
 	</div>
