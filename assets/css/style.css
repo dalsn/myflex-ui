@@ -19,6 +19,18 @@ body {
 		color: #fff;
 	}
 }
+/*@media (max-width: 768px) {
+	#myflexapp {
+		background-image: url('../imgs/bg2.jpg');
+		background-repeat: no-repeat;
+		background-size: 100% 28%;
+		opacity: 0.9;
+		color: #fff;
+	}
+	#app-info>.title {
+		color: #fff;
+	}
+}*/
 #wrapper {
 	flex: 1;
 	margin-bottom: 1.5em;

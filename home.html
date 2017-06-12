@@ -28,6 +28,7 @@
 				<div class="nav-right nav-menu" :class="{'is-active':showMobileMenu}">
 					<a class="nav-item is-tab is-active">Home</a>
 					<a class="nav-item is-tab">Documentation</a>
+					<a class="nav-item is-tab">Talk to Us</a>
 					<a class="nav-item is-tab">Get Started</a>
 					<div class="nav-item">
 						<a class="button is-primary">
@@ -37,7 +38,6 @@
 							<span>Login</span>
 						</a>
 					</div>
-					<a class="nav-item is-tab">Talk to Us</a>
 				</div>
 			</div>
 		</nav>
@@ -55,13 +55,13 @@
 						<img id="download-icon" src="assets/imgs/appstore.svg">
 						<img id="download-icon" src="assets/imgs/playstore.svg">
 					</div>
-					<div class="column has-text-centered" id="app">
+					<div class="column" id="app">
 						<div class="" id="app-area">
 							<!-- Quick Usage Section -->
-							<div class="quick-links">
+							<!-- <div class="quick-links has-text-centered">
 
-								<h3 class="title is-2 is-hidden-touch">What will you like to do?</h3>
-								<h3 class="title is-4 is-hidden-desktop">What will you like to do?</h3>
+								<h3 class="title is-2 is-hidden-touch">What would you like to do?</h3>
+								<h3 class="title is-4 is-hidden-desktop">What would you like to do?</h3>
 
 								<div class="tile is-ancestor">
 									<div class="tile is-vertical">
@@ -122,7 +122,7 @@
 									</div>
 								</div>
 
-							</div>
+							</div> -->
 
 							<!-- Login Section -->
 							<!-- <div class="login">
@@ -213,26 +213,42 @@
 							</div> -->
 
 							<!-- Buy Airtime -->
-							<!-- <div class="login">
+							<div class="buy-airtime">
 									
-								<h3 class="title is-2 is-hidden-touch">Buy Airtime</h3>
-								<h3 class="title is-4 is-hidden-desktop">Buy Airtime</h3>
+								<h3 class="title is-2 is-hidden-touch has-text-centered">Buy Airtime</h3>
+								<h3 class="title is-4 is-hidden-desktop has-text-centered">Buy Airtime</h3>
 
 								<form>
 									
 									<div class="field">
+										<label class="label">Network</label>
 										<p class="control has-icons-left">
-											<input class="input" type="email" placeholder="Email">
+											<span class="select is-left">
+												<select>
+													<option>Select Provider</option>
+													<option>MTN</option>
+												</select>
+											</span>
 											<span class="icon is-small is-left">
-												<i class="fa fa-envelope"></i>
+												<i class="fa fa-wifi"></i>
 											</span>
 										</p>
 									</div>
 									<div class="field">
+										<label class="label is-left">Mobile Number <span>*</span></label>
 										<p class="control has-icons-left">
-											<input class="input" type="password" placeholder="Password">
+											<input class="input" type="text" placeholder="Mobile Number">
 											<span class="icon is-small is-left">
-												<i class="fa fa-lock"></i>
+												<i class="fa fa-phone"></i>
+											</span>
+										</p>
+									</div>
+									<div class="field">
+										<label class="label is-left">Amount <span>*</span></label>
+										<p class="control has-icons-left">
+											<input class="input" type="number" placeholder="Amount">
+											<span class="icon is-small is-left">
+												<i class="fa fa-money"></i>
 											</span>
 										</p>
 									</div>
@@ -246,7 +262,7 @@
 
 								</form>
 
-							</div> -->
+							</div>
 
 						</div>
 											
