@@ -40,13 +40,21 @@ body {
 }
 #app-info {
 	padding-top: 3rem;
-	padding-bottom: 5rem;
+	padding-bottom: 1rem;
 }
 #feature {
 	border: 1px solid #C1C1C1;
 	border-radius: 5px;
 	padding: 1.5rem 2rem;
 }
-#login-btn {
-	margin-right: 30px;
+#feature-icon {
+	width: 3rem;
+	height: 4rem;
+}
+#download-icon {
+	/*width: 3rem;*/
+	height: 4rem;
+	margin-right: 1.5rem;
+	/*margin-bottom: 0.5rem;*/
+	margin-top: 1rem;
 }
