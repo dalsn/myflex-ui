@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<title>myFlex, my convinience</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	
+	<div id="root">
+
+		<nav class="nav has-shadow">
+			<div class="container">
+				<div class="nav-left">
+					<a class="nav-item">
+						<img src="assets/imgs/myflex-logo.png" alt="MyFlex logo">
+					</a>
+				</div>
+				<span class="nav-toggle" :class= "{'is-active':showMobileMenu}" @click="showMobileMenu = !showMobileMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+				<div class="nav-right nav-menu" :class="{'is-active':showMobileMenu}">
+					<a class="nav-item is-tab" :class="{'is-active':showQuickLinks}" @click="showQuickActions">Home</a>
+					<a class="nav-item is-tab">Documentation</a>
+					<a class="nav-item is-tab">Talk to Us</a>
+					<a class="nav-item is-tab" :class="{'is-active':showSignUp}" @click="showSignUpForm">Get Started</a>
+					<div class="nav-item">
+						<a class="button is-primary" @click="showLoginForm()">
+							<span class="icon">
+								<i class="fa fa-user-circle"></i>
+							</span>
+							<span>Login</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section class="section" id="myflexapp">
+			<div class="container">
+				<div class="columns">
+					<div class="column" id="app-info">
+						<h1 class="title"><b>Bill</b> Payments Made Easy</h1>
+						<h2>
+							Pay Bills, Buy Airtime and Transfer Money to any Nigerian Account Number or Mobile Wallet
+						</h2><br/>
+						<!-- <button class="button is-warning">App Store</button> -->
+						<!-- <button class="button is-warning">Google Play</button> -->
+						<img id="download-icon" src="assets/imgs/appstore.svg">
+						<img id="download-icon" src="assets/imgs/playstore.svg">
+					</div>
+					<div class="column" id="app">
+						<div class="" id="app-area">
+							<!-- Quick Usage Section -->
+							<quick-links title='What would you like to do?' v-show="showQuickLinks"></quick-links>
+
+							<!-- Login Section -->
+							<login title="Login" v-show="showLogin"></login>
+
+							<!-- Sign-Up Section -->
+							<sign-up title="Sign Up" v-show="showSignUp"></sign-up>
+
+							<!-- Buy Airtime -->
+							<buy-airtime title="Buy Airtime" v-show="showBuyAirtime"></buy-airtime>
+
+						</div>
+											
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="wrapper">
+			<div class="container has-text-centered" id="about-flex">
+				<h2 class="subtitle">
+					<b>Bill</b> Payments Made Easy
+				</h2>
+				<div class="columns">
+					<div class="column">
+						<span class="icon" id="feature-icon">
+							<img src="assets/imgs/smiley.svg">
+						</span>
+						<p><b>Quick</b></p>
+						<p>Pay bills and make payments in less than a minute</p>
+					</div>
+					<div class="column">
+						<span class="icon" id="feature-icon">
+							<img src="assets/imgs/wallet.svg">
+						</span>
+						<p><b>Save</b></p>
+						<p>Save money when you pay bills and make payments</p>
+					</div>
+					<div class="column">
+						<span class="icon" id="feature-icon">
+							<img src="assets/imgs/clock.svg">
+						</span>
+						<p><b>24/7</b></p>
+						<p>Available 24/7 to pay your bills and make payments</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p class="copyright">
+						2017 <i class="fa fa-copyright" aria-hidden="true" style="line-height: 1.5em;"></i> <b>myFlex</b> is Powered by <a href="http://flexmagnet.net">FlexMagnet Consulting</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="http://unpkg.com/vue"></script>
+
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>
