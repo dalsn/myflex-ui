@@ -26,12 +26,12 @@
 					<span></span>
 				</span>
 				<div class="nav-right nav-menu" :class="{'is-active':showMobileMenu}">
-					<a class="nav-item is-tab" :class="{'is-active':showQuickLinks}" @click="showQuickActions">Home</a>
+					<a class="nav-item is-tab" :class="{'is-active':showQuickLinks}" @click="showQuickActions" href="#app">Home</a>
 					<a class="nav-item is-tab">Documentation</a>
 					<a class="nav-item is-tab">Talk to Us</a>
-					<a class="nav-item is-tab" :class="{'is-active':showSignUp}" @click="showSignUpForm">Get Started</a>
+					<a class="nav-item is-tab" :class="{'is-active':showSignUp}" @click="showSignUpForm" href="#app">Get Started</a>
 					<div class="nav-item">
-						<a class="button is-primary" @click="showLoginForm()">
+						<a class="button is-primary" @click="showLoginForm()" href="#app">
 							<span class="icon">
 								<i class="fa fa-user-circle"></i>
 							</span>

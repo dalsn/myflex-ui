@@ -13,7 +13,7 @@ Vue.component('quick-links', {
 				<div class="tile is-vertical">
 					<div class="tile is-horizontal">
 						<div class="tile is-parent is-vertical">
-							<a class="tile is-child" id="feature" @click="showBuyAirtimeForm">
+							<a class="tile is-child" id="feature">
 								<span class="icon" id="feature-icon">
 									<img src="assets/imgs/phone.svg">
 								</span>
@@ -70,17 +70,7 @@ Vue.component('quick-links', {
 
 		</div>
 
-	`,
-
-	methods: {
-
-		showBuyAirtimeForm() {
-
-
-
-		}
-
-	}
+	`
 
 });
 
@@ -268,7 +258,8 @@ let app = new Vue({
 		showMobileMenu: false,
 		showLogin: false,
 		showQuickLinks: true,
-		showSignUp: false
+		showSignUp: false,
+		showBuyAirtime: false
 
 	},
 
@@ -279,6 +270,7 @@ let app = new Vue({
 			this.showLogin = true;
 			this.showQuickLinks = false;
 			this.showSignUp = false;
+			this.showMobileMenu = false;
 
 		},
 
@@ -287,6 +279,7 @@ let app = new Vue({
 			this.showLogin = false;
 			this.showQuickLinks = true;
 			this.showSignUp = false;
+			this.showMobileMenu = false;
 
 		},
 
@@ -295,6 +288,7 @@ let app = new Vue({
 			this.showLogin = false;
 			this.showQuickLinks = false;
 			this.showSignUp = true;
+			this.showMobileMenu = false;
 
 		}
 
